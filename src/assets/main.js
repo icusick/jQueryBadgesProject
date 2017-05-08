@@ -10,7 +10,8 @@ $(function() {
     		var completedCourses = response.courses.completed
     		console.log(completedCourses)
     		completedCourses.forEach(function(element){
-    			var newDiv = $('#badges').append('<div></div>')
+    			var newDiv = $('<div></div>')
+    			$('#badges').append(newDiv)
     			newDiv.addClass('course')
     			var title = $('<h3></h3>')
     			title.html(element.title)
